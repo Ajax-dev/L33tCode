@@ -4,6 +4,7 @@ public class RomanNum {
             for (int i = 0; i < s.length(); i++) {
                 switch(s.charAt(i)) {
                     case 'I':
+                        //unsure why this isn't working but now pushing
                         if (s.length() - 1 != i) {
                             System.out.println((s.length() -1) + " " + i);
                             if (s.charAt(i + 1) == 'V') {
