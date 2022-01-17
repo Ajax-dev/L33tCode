@@ -35,9 +35,9 @@ class Solution {
 
         // now add the lists together by a for loop
         if (count1 >= count2) {
-            for (int i = 0; i < ) {}
+//            for (int i = 0; i < ) {}
         } else if (count2 > count1) {
-            for (int i = 0; i < ) {}
+//            for (int i = 0; i < ) {}
         }
 
         return l1;
