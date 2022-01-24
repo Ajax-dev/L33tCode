@@ -33,10 +33,16 @@ class RomanNumTest {
     }
 
     @org.junit.jupiter.api.Test
-    @DisplayName("Testing IV is 9, then testing IIIIIIIII is 9")
+    @DisplayName("Testing IX is 9, then testing IIIIIIIII is 9")
     void is9() {
         Assert.assertEquals(9, rom.romanToInt("IX"));
-        Assert.assertEquals(9, rom.romanToInt("IIIIIIIII"));
+
+    }
+
+    @org.junit.jupiter.api.Test
+    @DisplayName("Testing DCXXI is 621")
+    void is621() {
+        Assert.assertEquals(621, rom.romanToInt("DCXXI"));
 
     }
 
