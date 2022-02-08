@@ -7,6 +7,10 @@
  *
  * Runtime: 25 ms, faster than 48.50% of Java online submissions for First Unique Character in a String.
  * Memory Usage: 47.8 MB, less than 37.39% of Java online submissions for First Unique Character in a String.
+ *          this was when declaring int firstInd = i  and same for lastInd, intellij told me this was redundant, new score
+ *
+ * Runtime: 18 ms, faster than 64.48% of Java online submissions for First Unique Character in a String.
+ * Memory Usage: 42.6 MB, less than 63.37% of Java online submissions for First Unique Character in a String.
  */
 
 public class UniqueChar {
