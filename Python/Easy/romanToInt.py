@@ -47,8 +47,25 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        total = 0
-        return(total)
+        num = 0
+        roman = {'I':1,'V':5,'X':10,'L':50,'C':100,'D':500,'M':1000,'IV':4,'IX':9,'XL':40,'XC':90,'CD':400,'CM':900}
+        i = 0
+        if len(s) < 1:
+            pass
+        else:
+            while i < len(s):
+                # s[i:i+2] is a list slice of s from i to i+2
+                # for some reason i+1 == i 
+                # because list slicing is [start:stop:step]
+                ## and stop is every element up to STOP but not including
+                if i+1<len(s) and s[i:i+2] in roman:
+                    num+=roman[s[i:i+2]]
+                    i+=2
+                else:
+                    #print(i)
+                    num+=roman[s[i]]
+                    i+=1
+        return num
 
 
 obj = Solution()
