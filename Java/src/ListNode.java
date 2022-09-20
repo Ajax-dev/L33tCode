@@ -10,13 +10,10 @@ public class ListNode {
 
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode list;
+
 
         int count1 = 0;// Initialize count l1
         int count2 = 0; // initialize count l2
-
-        ListNode l1copy = l1;
-        ListNode l2copy = l2;
 
         // counting the length of each list
         do {

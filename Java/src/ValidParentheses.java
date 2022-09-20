@@ -26,6 +26,13 @@ Constraints:
 
 1 <= s.length <= 104
 s consists of parentheses only '()[]{}'
+
+Runtime: 3 ms, faster than 66.21% of Java online submissions for Valid Parentheses.
+Memory Usage: 42.5 MB, less than 16.73% of Java online submissions for Valid Parentheses.
+
+Solution runs until the first right hand bracket is shown, when that happens it hits the default case and begins popping
+Stack is a LIFO data structure so the opposite of a queue and so once in the middle should return values going outwards i.e.
+test case 4 s={[([{()}])]} | would have a stack of | [}, ], ), ], }, )]
 */
 
 import java.util.Stack;
@@ -52,6 +59,7 @@ class ValidParentheses {
                     if (stack.isEmpty() || stack.pop() != c){return false;}
             }
         }
+        System.out.println("s=" + s + " | " + stack.isEmpty() + "| " + stack);
         return stack.isEmpty();
     }
 }
