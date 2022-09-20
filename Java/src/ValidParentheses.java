@@ -27,7 +27,10 @@ Constraints:
 1 <= s.length <= 104
 s consists of parentheses only '()[]{}'
 */
-class Solution {
+
+import java.util.Stack;
+
+class ValidParentheses {
     public boolean isValid(String s) {
         Stack<Character> stack = new Stack<Character>();
 

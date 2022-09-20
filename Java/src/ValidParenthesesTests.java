@@ -2,15 +2,14 @@ import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 
-import static org.junit.jupiter.api.Assertions.*;
-import ValidParentheses;
 
-class ValidParenthesesTest {
+
+class ValidParenthesesTests {
     ValidParentheses v;
 
     @BeforeEach
     void setUp() {
-        uni = new ValidParentheses();
+        v = new ValidParentheses();
     }
 
     @org.junit.jupiter.api.Test
@@ -21,30 +20,30 @@ class ValidParenthesesTest {
 
     @org.junit.jupiter.api.Test
     @DisplayName("leetcode returns true for '()'")
-    void test1() { Assert.assertEquals(0, v.isValid("()"));}
+    void test1() { Assert.assertEquals(true, v.isValid("()"));}
 
     @org.junit.jupiter.api.Test
     @DisplayName("leetcode returns true for '()[]'")
-    void test2() { Assert.assertEquals(0, v.isValid("()[]"));}
+    void test2() { Assert.assertEquals(true, v.isValid("()[]"));}
 
     @org.junit.jupiter.api.Test
     @DisplayName("leetcode returns true for '()[]{}'")
-    void test3() { Assert.assertEquals(0, v.isValid("()[]{}"));}
+    void test3() { Assert.assertEquals(true, v.isValid("()[]{}"));}
 
     @org.junit.jupiter.api.Test
     @DisplayName("leetcode returns true for '{[([{()}])]}'")
-    void test4() { Assert.assertEquals(0, v.isValid("{[([{()}])]}"));}
+    void test4() { Assert.assertEquals(true, v.isValid("{[([{()}])]}"));}
 
     @org.junit.jupiter.api.Test
     @DisplayName("leetcode returns false for '()[]{}('")
-    void test5() { Assert.assertEquals(0, v.isValid("()[]{}("));}
+    void test5() { Assert.assertEquals(false, v.isValid("()[]{}("));}
 
     @org.junit.jupiter.api.Test
     @DisplayName("leetcode returns false for '([{)]}'")
-    void test6() { Assert.assertEquals(0, v.isValid("([{)]}"));}
+    void test6() { Assert.assertEquals(false, v.isValid("([{)]}"));}
 
     @org.junit.jupiter.api.Test
     @DisplayName("leetcode returns false for '(((())])'")
-    void test7() { Assert.assertEquals(0, v.isValid("(((())])"));}
+    void test7() { Assert.assertEquals(false, v.isValid("(((())])"));}
 
 }
