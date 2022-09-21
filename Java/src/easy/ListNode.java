@@ -89,4 +89,28 @@ class ListNodeTasks {
         
         return head.next;
     }
+
+    /*
+    Runtime: 3 ms, faster than 24.26% of Java online submissions for Linked List Cycle.
+    Memory Usage: 45.5 MB, less than 75.71% of Java online submissions for Linked List Cycle.
+
+    Hare - turtle algorithm for finding cycles
+     */
+    public boolean hasCycle(ListNode head) {
+        if (head == null) {
+            return false;
+        }
+        ListNode hare = head;
+        ListNode turtle = head;
+        
+        while (hare != null && hare.next != null) {
+            turtle = turtle.next;
+            hare = hare.next.next;
+            
+            if (turtle == hare) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
