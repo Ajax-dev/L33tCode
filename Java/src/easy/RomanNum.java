@@ -1,3 +1,4 @@
+package easy;
 public class RomanNum {
         public int romanToInt(String s) {
             int total = 0;
